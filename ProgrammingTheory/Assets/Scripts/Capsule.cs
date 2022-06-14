@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Capsule : Shape
+public class Capsule : Shape //INHERITANCE
 {
-     public override void OnMouseDown()
+    public string capName { get; private set; } // ENCAPSULATION
+
+    private void Start() 
     {
-        Debug.Log("I'm a capsule.");
+        capName = "Cappy";    
+    }
+     public override void OnMouseDown() // POLYMORPHISM  // ABSTRACTION
+    {
+        Debug.Log("My name is " + capName);
     }
 }
